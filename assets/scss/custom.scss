@@ -18,8 +18,8 @@
 }
 // 自定义颜色部分结束
 
-// 禁用移动端点击超链接的蓝色效果
-a {
+// 禁用移动端点击的蓝色效果
+* {
     -webkit-tap-highlight-color: transparent;
 }
 // 禁用结束
