@@ -17,3 +17,9 @@
     --card-text-color-tertiary: #888B8D;
 }
 // 自定义颜色部分结束
+
+// 禁用移动端点击超链接的蓝色效果
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+// 禁用结束
