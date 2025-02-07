@@ -1,1 +1,19 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+
+// 改善浅色模式整个网页的可读性
+:root {
+    --body-background: #EBEBEB;
+    --accent-color: #1B365D;
+    --accent-color-darker: #202A44;
+    --accent-color-text: #FFF;
+    --body-text-color: #202A44;
+}
+
+:root {
+    --card-background: #FFF;
+    --card-background-selected: #EBEBEB;
+    --card-text-color-main: #202A44;
+    --card-text-color-secondary: #53565A;
+    --card-text-color-tertiary: #888B8D;
+}
+// 自定义颜色部分结束
