@@ -25,7 +25,10 @@ article:
         other: 最后更新于
 
     readingTime:
-        other: "阅读时长: {{ .Count }} 分钟"
+        other: "阅读时长： {{ .Count }} 分钟"
+
+    wordCount:
+        other: 字数： {{ .Count }} 字
 
 notFound:
     title:

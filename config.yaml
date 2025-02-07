@@ -3,6 +3,11 @@ module:
         extended: true
         min: "0.87.0"
 
+# 添加自动修改编辑时间的功能
+frontmatter:
+    lastmod: [":fileModTime", "lastmod"]
+# 结束
+
 params:
     mainSections:
         - post
@@ -35,6 +40,10 @@ params:
         license:
             enabled: false
             default: Licensed under CC BY-NC-SA 4.0
+
+        # 添加字数统计功能
+        wordCount: true
+        # 自定义部分结束
 
     comments:
         enabled: false
