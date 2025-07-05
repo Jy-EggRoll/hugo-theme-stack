@@ -23,3 +23,9 @@
     -webkit-tap-highlight-color: transparent;
 }
 // 禁用结束
+
+// 增强圆角效果
+:root {
+    --tag-border-radius: 16px;
+    --card-border-radius: 16px;
+}
