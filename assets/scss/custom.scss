@@ -3,229 +3,52 @@
 // ===== 自定义方案 =====
 // 改善整个网页的可读性
 :root {
-    // 页面背景色 - 使用浅灰色提高阅读舒适度
-    --body-background: #fffcdd;
-
-    // 主要强调色 - 深蓝色，用于链接、按钮等重要元素
-    --accent-color: #FF7D29;
-
-    // 深色强调色 - 用于悬停状态和更深的强调
-    --accent-color-darker: #a05422;
-
-    // 强调色上的文字颜色 - 白色确保对比度
-    --accent-color-text: #FFF;
-
-    // 正文文字颜色 - 深色确保可读性
-    --body-text-color: #202A44;
-
-    // 卡片背景色 - 纯白色突出内容
-    --card-background: #fffbd7;
-
-    // 卡片选中状态背景色 - 与页面背景色一致
-    --card-background-selected: #EBEBEB;
-
-    // 卡片主要文字颜色 - 与正文颜色一致
-    --card-text-color-main: #202A44;
-
-    // 卡片次要文字颜色 - 稍微淡一些的灰色
-    --card-text-color-secondary: #53565A;
-
-    // 卡片第三级文字颜色 - 更淡的灰色，用于不重要信息
-    --card-text-color-tertiary: #888B8D;
-
-    // 增强圆角效果 - 让界面更现代化
+    --body-background: #fffef8; // 页面背景色
+    --accent-color: #FF7D29; // 主要强调色
+    --accent-color-darker: #a05422; // 加深强调色
+    --accent-color-text: #FFF; // 强调色上的文字颜色
+    --body-text-color: #202A44; // 正文文字颜色
+    --card-background: #fffded; // 卡片背景色
+    --card-text-color-main: #202A44; // 卡片主要文字的颜色
+    --card-text-color-secondary: #53565A; // 卡片次要文字的颜色
+    --card-text-color-tertiary: #888B8D; // 卡片第三级文字的颜色
     --tag-border-radius: 16px; // 标签圆角
     --card-border-radius: 16px; // 卡片圆角
-
-    // 行内代码样式
     --code-background-color: rgba(0, 0, 0, 0.08); // 行内代码背景色
     --code-text-color: #8b08d7; // 行内代码文字颜色
-
-    // 滚动条样式
     --scrollbar-thumb: #FFBF78; // 滚动条滑块颜色
     --scrollbar-track: var(--body-background); // 滚动条轨道颜色
-
-    // 引用提示线
-    --card-separator-color: #00eaea;
+    --card-separator-color: #d4f6fe; // 分割提示线
     --blockquote-background-color: #edfffe; // 引用块背景色
+    --card-background-selected: #f7e8b9; // 卡片选中状态的颜色
 
-    // 卡片选中状态背景色
-    --card-background-selected: #f7e8b9;
+    &[data-scheme="dark"] {
+        --body-background: #2c2c2c; // 页面背景色
+        --accent-color: #eaae86; // 主要强调色
+        --accent-color-darker: #a05422; // 加深强调色
+        --accent-color-text: #FFF; // 强调色上的文字颜色
+        --body-text-color: #a6a6a6; // 正文文字颜色
+        --card-background: #3c4040; // 卡片背景色
+        --card-text-color-main: #b2b6bf; // 卡片主要文字的颜色
+        --card-text-color-secondary: #737476; // 卡片次要文字的颜色
+        --card-text-color-tertiary: #abacad; // 卡片第三级文字的颜色
+        --tag-border-radius: 16px; // 标签圆角
+        --card-border-radius: 16px; // 卡片圆角
+        --code-background-color: rgba(0, 0, 0, 0.08); // 行内代码背景色
+        --code-text-color: #8fd708; // 行内代码文字颜色
+        --scrollbar-thumb: #9b7448; // 滚动条滑块颜色
+        --scrollbar-track: var(--body-background); // 滚动条轨道颜色
+        --card-separator-color: #5d6658; // 分割提示线
+        --blockquote-background-color: #434e47; // 引用块背景色
+        --card-background-selected: #938b73; // 卡片选中状态的颜色
+    }
 }
 
 // 自定义颜色部分结束
 
 // ===== 移动端优化 =====
-// 禁用移动端点击的蓝色效果
 * {
-    // 移除手机浏览器等浏览器在触摸时的高亮效果
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; // 移除手机浏览器等浏览器在触摸时的高亮效果
 }
 
 // 禁用结束
-
-// 代码块样式覆写
-// 浅色主题下的代码高亮设置
-[data-scheme="light"] {
-    --pre-text-color: #272822; // 深色文字
-    --pre-background-color: #fafafa; // 浅色背景
-    @import "partials/highlight/light.scss"; // 导入浅色代码高亮样式
-}
-
-// 深色主题下的代码高亮设置
-[data-scheme="dark"] {
-    --pre-text-color: #f8f8f2; // 浅色文字
-    --pre-background-color: #272822; // 深色背景
-    @import "partials/highlight/dark.scss"; // 导入深色代码高亮样式
-}
-
-:root {
-
-
-    // 深色主题模式下的颜色配置
-    &[data-scheme="dark"] {
-        --body-background: #303030; // 深色背景
-        --accent-color: #ecf0f1; // 浅色强调色
-        --accent-color-darker: #bdc3c7; // 深色强调色
-        --accent-color-text: #000; // 强调色上的黑色文字
-        --body-text-color: rgba(255, 255, 255, 0.7); // 半透明白色文字
-        --scrollbar-thumb: hsl(0, 0%, 40%); // 深色滚动条滑块
-        --scrollbar-track: var(--body-background); // 滚动条轨道使用背景色
-    }
-}
-
-/*
-*   卡片样式变量
-*   控制网站中各种卡片组件的外观和布局
-*/
-:root {
-    // 卡片背景色（注意：这里被上面的自定义颜色覆盖）
-    // --card-background: #fff;
-
-    // 卡片内文字的层级颜色（注意：这里被上面的自定义颜色覆盖）
-    --card-text-color-main: #000; // 主要文字 - 最深色
-    --card-text-color-secondary: #747474; // 次要文字 - 中等灰色
-    --card-text-color-tertiary: #767676; // 第三级文字 - 浅灰色
-    // 卡片分割线颜色
-
-    // 卡片圆角半径（注意：这里被上面的自定义设置覆盖）
-    // --card-border-radius: 10px;
-
-    // 卡片内边距 - 响应式设计
-    --card-padding: 20px; // 默认内边距
-
-    // 中等屏幕上的内边距
-    @include respond(md) {
-        --card-padding: 25px;
-    }
-
-    // 大屏幕上的内边距
-    @include respond(xl) {
-        --card-padding: 30px;
-    }
-
-    // 小卡片的内边距设置
-    --small-card-padding: 25px 20px; // 垂直25px，水平20px
-
-    // 中等屏幕上的小卡片内边距
-    @include respond(md) {
-        --small-card-padding: 25px; // 所有方向25px
-    }
-
-    // 深色主题下的卡片样式
-    &[data-scheme="dark"] {
-        --card-background: #424242; // 深灰色背景
-        --card-background-selected: rgba(255, 255, 255, 0.16); // 半透明白色选中状态
-        --card-text-color-main: rgba(255, 255, 255, 0.9); // 高透明度白色主文字
-        --card-text-color-secondary: rgba(255, 255, 255, 0.7); // 中透明度白色次要文字
-        --card-text-color-tertiary: rgba(255, 255, 255, 0.5); // 低透明度白色第三级文字
-        --card-separator-color: rgba(255, 255, 255, 0.12); // 半透明白色分割线
-    }
-}
-
-/**
-*   文章内容字体设置
-*   控制博客文章正文的字体大小、行高等排版参数
-*/
-:root {
-    // 文章使用的字体家族 - 继承基础字体
-    --article-font-family: var(--base-font-family);
-    // 文章字体大小 - 默认16px的1.6倍 = 25.6px
-    --article-font-size: 1.6rem;
-
-    // 中等屏幕上的字体大小
-    @include respond(md) {
-        --article-font-size: 1.7rem; // 稍微增大到1.7rem
-    }
-
-    // 文章行高 - 1.85倍行高提供良好的阅读体验
-    --article-line-height: 1.85;
-}
-
-/*
-*   文章内容样式变量
-*   控制文章中各种元素（引用、代码、表格等）的样式
-*/
-:root {
-    // 引用块样式
-    --blockquote-border-size: 4px; // 引用块左边框宽度
-
-
-    // 标题边框大小
-    --heading-border-size: 4px;
-
-    // 链接样式
-    --link-background-color: 189, 195, 199; // 链接背景色的RGB值
-    --link-background-opacity: 0.5; // 链接背景透明度
-    --link-background-opacity-hover: 0.7; // 链接悬停时背景透明度
-
-
-
-
-
-    // 表格样式
-    --table-border-color: #dadada; // 表格边框颜色
-    --tr-even-background-color: #efefee; // 表格偶数行背景色
-
-    // 键盘按键样式
-    --kbd-border-color: #dadada; // 键盘按键边框颜色
-
-    // 深色主题下的文章内容样式
-    &[data-scheme="dark"] {
-        --code-background-color: #272822; // 深色模式下的行内代码背景
-        --code-text-color: rgba(255, 255, 255, 0.9); // 深色模式下的行内代码文字
-
-        --table-border-color: #717171; // 深色模式下的表格边框
-        --tr-even-background-color: #545454; // 深色模式下的表格偶数行背景
-
-        --blockquote-background-color: rgb(75 75 75); // 深色模式下的引用块背景
-    }
-}
-
-/*
-*   阴影样式定义
-*   提供多层次的阴影效果，创建视觉层次感
-*   感谢 https://www.figma.com/community/plugin/744987207861965946/Shadow-picker
-*/
-:root {
-    // 第一级阴影 - 最轻微的阴影效果
-    --shadow-l1: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
-    // 第二级阴影 - 中等强度的阴影
-    --shadow-l2: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
-    // 第三级阴影 - 与第二级相同，可能用于不同场景
-    --shadow-l3: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
-    // 第四级阴影 - 最强烈的阴影效果，用于模态框等重要元素
-    --shadow-l4: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04),
-        0px 0px 1px rgba(0, 0, 0, 0.04);
-}
-
-
-
-// 其他布局相关变量
-:root {
-    --menu-icon-separation: 40px; // 菜单图标间距
-    --container-padding: 15px; // 容器内边距
-    --widget-separation: var(--section-separation); // 小部件间距，继承区块间距
-}
-
-// 定义结束
