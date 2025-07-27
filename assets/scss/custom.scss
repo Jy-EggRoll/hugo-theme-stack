@@ -1,42 +1,40 @@
 :root {
-    --body-background: #FFFCFB; // 页面背景色
-    --accent-color: #FF7D29; // 主要强调色
-    --accent-color-darker: #7B4019; // 加深强调色
-    --accent-color-text: #FFF; // 强调色上的文字颜色
-    --body-text-color: #3B060A; // 边栏文字颜色等
-    --card-background: #F9F3EF; // 卡片背景色
-    --card-text-color-main: #3B060A; // 卡片主要文字的颜色
-    --card-text-color-secondary: #53565A; // 卡片次要文字的颜色
-    --card-text-color-tertiary: #888B8D; // 卡片第三级文字的颜色
+    --body-background: #eff1f5; // 页面背景色
+    --accent-color: #fe640b; // 主要强调色
+    --accent-color-darker: #e64553; // 加深强调色
+    --body-text-color: #4c4f69; // 边栏文字颜色等
+    --card-background: #e6e9ef; // 卡片背景色
+    --card-text-color-main: #4c4f69; // 卡片主要文字的颜色
+    --card-text-color-secondary: #5c5f77; // 卡片次要文字的颜色
+    --card-text-color-tertiary: #6c6f85; // 卡片第三级文字的颜色
     --tag-border-radius: 16px; // 标签圆角
     --card-border-radius: 16px; // 卡片圆角
     --code-background-color: rgba(0, 0, 0, 0.08); // 行内代码背景色
-    --code-text-color: #3D74B6; // 行内代码文字颜色
-    --scrollbar-thumb: #FF7D29; // 滚动条滑块颜色
+    --code-text-color: #40a02b; // 行内代码文字颜色
+    --scrollbar-thumb: #fe640b; // 滚动条滑块颜色
     --scrollbar-track: var(--body-background); // 滚动条轨道颜色
-    --card-separator-color: #FF9587; // 分割提示线
-    --blockquote-background-color: #FFECCC; // 引用块背景色
-    --card-background-selected: #f7e8b9; // 卡片选中状态的颜色
+    --card-separator-color: #209fb5; // 分割提示线
+    --blockquote-background-color: #ccd0da; // 引用块背景色
+    --card-background-selected: #7287fd; // 卡片选中状态的颜色
 
     &[data-scheme="dark"] {
-        --body-background: #3B3B3B; // 页面背景色
-        --accent-color: #DCA06D; // 主要强调色
-        --accent-color-darker: #A55B4B; // 加深强调色
-        --accent-color-text: #FFF; // 强调色上的文字颜色
-        --body-text-color: #DFD0B8; // 边栏文字颜色等
-        --card-background: #32302b; // 卡片背景色
-        --card-text-color-main: #DCD7C9; // 卡片主要文字的颜色
-        --card-text-color-secondary: #A27B5C; // 卡片次要文字的颜色
-        --card-text-color-tertiary: #abacad; // 卡片第三级文字的颜色
+        --body-background: #303446; // 页面背景色
+        --accent-color: #ef9f76; // 主要强调色
+        --accent-color-darker: #ea999c; // 加深强调色
+        --body-text-color: #c6d0f5; // 边栏文字颜色等
+        --card-background: #292c3c; // 卡片背景色
+        --card-text-color-main: #c6d0f5; // 卡片主要文字的颜色
+        --card-text-color-secondary: #b5bfe2; // 卡片次要文字的颜色
+        --card-text-color-tertiary: #a5adce; // 卡片第三级文字的颜色
         --tag-border-radius: 16px; // 标签圆角
         --card-border-radius: 16px; // 卡片圆角
         --code-background-color: rgba(0, 0, 0, 0.08); // 行内代码背景色
-        --code-text-color: #f1a9a0; // 行内代码文字颜色
-        --scrollbar-thumb: #DCA06D; // 滚动条滑块颜色
+        --code-text-color: #f4b8e4; // 行内代码文字颜色
+        --scrollbar-thumb: #ef9f76; // 滚动条滑块颜色
         --scrollbar-track: var(--body-background); // 滚动条轨道颜色
-        --card-separator-color: #78A083; // 分割提示线
-        --blockquote-background-color: #345548; // 引用块背景色
-        --card-background-selected: #DBAFA0; // 下方页码标签底色
+        --card-separator-color: #babbf1; // 分割提示线
+        --blockquote-background-color: #51576d; // 引用块背景色
+        --card-background-selected: #ca9ee6; // 下方页码标签底色
     }
 }
 
