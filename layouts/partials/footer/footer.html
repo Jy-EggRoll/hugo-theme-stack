@@ -1,5 +1,17 @@
 {{- $ThemeVersion := "3.30.0" -}}
 <footer class="site-footer">
+    <section class="totalcount">
+        {{$scratch := newScratch}}
+        {{ range (where .Site.Pages "Kind" "page" )}}
+        {{$scratch.Add "total" .WordCount}}
+        {{ end }}
+        发表了 {{ len (where .Site.RegularPages "Section" "post") }} 篇文章 
+        总计 {{ div ($scratch.Get "total") | lang.FormatNumber 2 }} 字
+    </section>
+    <section class="running">
+        本博客已稳定运行 
+        <span id="runningtime"></span>
+    </section>
     <section class="copyright">
         &copy; 
         {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
