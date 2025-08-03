@@ -12,13 +12,16 @@
 
 <!-- 添加网页运行时间 -->
 <script>
-    const startTime = "2024-12-10";
-    const nowTime = new Date();
-    const diffTime = nowTime.getTime() - startTime.getTime();
-    const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
-    const result = `${days} 天 ${hours} 小时 ${minutes} 分钟`;
-    document.getElementById('runningtime').innerHTML = result;
+    let start = '2024-12-10';
+    start = new Date(s1.replace(/-/g, "/"));
+    let now = new Date();
+    let timeDifference = now.getTime() - start.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + " 天 " + hours + " 小时 " + minutes + " 分钟";
+    document.getElementById('runningdays').innerHTML = result;
 </script>
 <!-- 网页运行时间逻辑结束 -->
