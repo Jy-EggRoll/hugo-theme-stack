@@ -6,7 +6,7 @@
         {{$scratch.Add "total" .WordCount}}
         {{ end }}
         发表了 {{ len (where .Site.RegularPages "Section" "post") }} 篇文章 
-        总计 {{ div ($scratch.Get "total") | lang.FormatNumber 2 }} 字
+        总计 {{ div ($scratch.Get "total") 1 | lang.FormatNumber 2 }} 字
     </section>
     <section class="running">
         本博客已稳定运行 
