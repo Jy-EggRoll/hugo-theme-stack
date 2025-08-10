@@ -12,7 +12,9 @@ footer.site-footer {
         margin-bottom: 20px;
     }
 
-    .copyright {
+    .copyright,
+    .running-time,
+    .totalcount {
         color: var(--accent-color);
         font-weight: bold;
         margin-bottom: 5px;
