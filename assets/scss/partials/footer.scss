@@ -12,15 +12,15 @@ footer.site-footer {
         margin-bottom: 20px;
     }
 
-    .copyright,
-    .running-time,
-    .totalcount {
+    .copyright {
         color: var(--accent-color);
         font-weight: bold;
         margin-bottom: 5px;
     }
 
-    .powerby {
+    .powerby,
+    .running-time,
+    .totalcount {
         color: var(--body-text-color);
         font-weight: normal;
         font-size: 1.2rem;
