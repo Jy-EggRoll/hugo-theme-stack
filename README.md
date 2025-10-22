@@ -6,6 +6,11 @@
 
 Card-style Hugo theme designed for bloggers.
 
+## 当前修改内容
+
+- 优化了圆角样式
+- 转向 Catppuccin 色调
+
 ## Quickstart
 
 Use this template: [CaiJimmy/hugo-theme-stack-starter](https://github.com/CaiJimmy/hugo-theme-stack-starter)
