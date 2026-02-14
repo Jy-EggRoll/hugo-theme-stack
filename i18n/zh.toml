@@ -11,7 +11,8 @@ darkMode   = "暗色模式"
     tableOfContents = "目录"
     relatedContent  = "相关文章"
     lastUpdatedOn   = "最后更新于"
-    readingTime     = "阅读时长: {{ .Count }} 分钟"
+    readingTime     = "阅读时长：{{ .Count }} 分钟"
+    wordCount       = "{{ .Count }} 字"
 
 [notFound]
     title    = "404 错误"
@@ -35,4 +36,4 @@ darkMode   = "暗色模式"
 
 [footer]
     builtWith  = "使用 {{ .Generator }} 构建"
-    designedBy = "主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计"
+    designedBy = "主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计，由 蛋卷儿 深入修改"

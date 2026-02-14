@@ -28,17 +28,20 @@ let Stack = {
          * Add copy button to code block
         */
         const highlights = document.querySelectorAll('.article-content div.highlight');
-        const copyText = `Copy`,
-            copiedText = `Copied!`;
+        const copyText = `复制`,
+            copiedText = `成功`;
 
         highlights.forEach(highlight => {
             const copyButton = document.createElement('button');
-            copyButton.innerHTML = copyText;
             copyButton.classList.add('copyCodeButton');
             highlight.appendChild(copyButton);
 
             const codeBlock = highlight.querySelector('code[data-lang]');
             if (!codeBlock) return;
+
+            const lang = codeBlock.getAttribute("data-lang") || "text";
+
+            copyButton.innerHTML = copyText + ` ${lang}`;
 
             copyButton.addEventListener('click', () => {
                 navigator.clipboard.writeText(codeBlock.textContent)

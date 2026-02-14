@@ -18,7 +18,9 @@ footer.site-footer {
         margin-bottom: 5px;
     }
 
-    .powerby {
+    .powerby,
+    .running-time,
+    .totalcount {
         color: var(--body-text-color);
         font-weight: normal;
         font-size: 1.2rem;

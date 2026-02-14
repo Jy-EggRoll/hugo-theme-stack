@@ -392,6 +392,13 @@
         padding: var(--card-padding);
         position: relative;
 
+        // 下面是修改代码块的自定义代码
+        border-radius: var(--card-border-radius) !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-shadow: var(--shadow-l1) !important;
+        // 自定义部分结束
+
         &:hover {
             .copyCodeButton {
                 opacity: 1;
@@ -419,7 +426,7 @@
         border: none;
         box-shadow: var(--shadow-l2);
         border-radius: var(--tag-border-radius);
-        padding: 8px 16px;
+        padding: auto;
         color: var(--card-text-color-main);
         cursor: pointer;
         font-size: 14px;
