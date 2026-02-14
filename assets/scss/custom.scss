@@ -1,1 +1,4 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+* {
+    -webkit-tap-highlight-color: transparent; // 移除手机浏览器等浏览器在触摸时的高亮效果
+}
