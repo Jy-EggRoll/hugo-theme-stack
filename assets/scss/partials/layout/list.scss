@@ -7,6 +7,11 @@
     align-items: center;
     gap: 20px;
 
+    &.stack-card {
+        background-color: rgba(var(--stack-card-rgb, 255, 255, 255), var(--stack-card-alpha));
+        border: 1px solid var(--stack-card-border);
+    }
+
     --separation: 15px;
 
     .section-term {

@@ -397,6 +397,11 @@
         max-width: 100% !important;
         margin: 0 !important;
         box-shadow: var(--shadow-l1) !important;
+
+        &.stack-card {
+            background-color: rgba(var(--stack-card-rgb, 255, 255, 255), var(--stack-card-alpha));
+            border: 1px solid var(--stack-card-border);
+        }
         // 自定义部分结束
 
         &:hover {

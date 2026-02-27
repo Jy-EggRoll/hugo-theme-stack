@@ -3,4 +3,9 @@
     box-shadow: var(--shadow-l1);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
+
+    &.stack-card {
+        background-color: rgba(var(--stack-card-rgb, 255, 255, 255), var(--stack-card-alpha));
+        border: 1px solid var(--stack-card-border);
+    }
 }

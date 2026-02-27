@@ -12,6 +12,11 @@
         border-radius: var(--card-border-radius);
         overflow: hidden;
 
+        &.stack-card {
+            background-color: rgba(var(--stack-card-rgb, 255, 255, 255), var(--stack-card-alpha));
+            border: 1px solid var(--stack-card-border);
+        }
+
         transition: box-shadow 0.3s ease;
 
         &:hover {

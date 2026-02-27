@@ -37,11 +37,15 @@ let Stack = {
             highlight.appendChild(copyButton);
 
             const codeBlock = highlight.querySelector('code[data-lang]');
-            if (!codeBlock) return;
+            if (!codeBlock) {
+                copyButton.textContent = copyText;
+                return;
+            }
 
-            const lang = codeBlock.getAttribute("data-lang") || "text";
+            const lang = codeBlock.getAttribute('data-lang') || 'text';
+            const buttonLabel = `${copyText} ${lang}`;
 
-            copyButton.innerHTML = copyText + ` ${lang}`;
+            copyButton.textContent = buttonLabel;
 
             copyButton.addEventListener('click', () => {
                 navigator.clipboard.writeText(codeBlock.textContent)
@@ -49,7 +53,7 @@ let Stack = {
                         copyButton.textContent = copiedText;
 
                         setTimeout(() => {
-                            copyButton.textContent = copyText;
+                            copyButton.textContent = buttonLabel;
                         }, 1000);
                     })
                     .catch(err => {

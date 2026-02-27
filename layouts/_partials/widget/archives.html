@@ -3,7 +3,7 @@
 {{- $limit := default 5 .Params.limit -}}
 {{- if $query -}}
     {{- $archivesPage := index $query 0 -}}
-    <section class="widget archives">
+    <section class="widget archives stack-card">
         <div class="widget-icon">
             {{ partial "helper/icon" "infinity" }}
         </div>

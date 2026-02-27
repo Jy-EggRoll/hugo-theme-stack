@@ -2,6 +2,14 @@
     display: flex;
     flex-direction: column;
 
+    &.stack-card {
+        background-color: rgba(var(--stack-card-rgb, 255, 255, 255), var(--stack-card-alpha));
+        border: 1px solid var(--stack-card-border);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+
     .widget-icon {
         svg {
             width: 32px;

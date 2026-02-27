@@ -1,5 +1,5 @@
 {{ $image := partial "helper/image" (dict "Image" .context.Params.image "Resources" .context.Resources) }}
-<article class="{{ if $image }}has-image{{ end }}">
+<article class="stack-card {{ if $image }}has-image{{ end }}">
     <a href="{{ .context.RelPermalink }}">
         {{ if $image }}
         <div class="article-image">

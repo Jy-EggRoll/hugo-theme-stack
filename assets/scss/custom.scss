@@ -131,6 +131,18 @@ $mocha-crust: #11111b;
     --blockquote-background-color: #{$latte-surface0}; // 引用块背景色
     --card-background-selected: #{$latte-overlay0}; // 卡片选中状态的颜色
 
+    // Background layer + glass controls
+    --stack-bg-image: none;
+    --stack-bg-opacity: 0.55;
+    --stack-bg-blur: 0px;
+    --stack-bg-scale: 1.08;
+    --stack-bg-overlay: rgba(239, 241, 245, 0.55);
+    --stack-card-alpha: 0.88;
+    --stack-card-blur: 14px;
+    --stack-card-saturate: 1.15;
+    --stack-card-border: rgba(0, 0, 0, 0.06);
+    --stack-card-rgb: 255, 255, 255;
+
     &[data-scheme="dark"] {
         --body-background: #{$frappe-base}; // 页面背景色
         --accent-color: #{$frappe-peach}; // 主要强调色
@@ -149,5 +161,71 @@ $mocha-crust: #11111b;
         --card-separator-color: #{$frappe-overlay2}; // 分割提示线
         --blockquote-background-color: #{$frappe-surface0}; // 引用块背景色
         --card-background-selected: #{$frappe-overlay0}; // 卡片选中状态的颜色
+
+        --stack-bg-image: none;
+        --stack-bg-opacity: 0.5;
+        --stack-bg-blur: 0px;
+        --stack-bg-scale: 1.08;
+        --stack-bg-overlay: rgba(48, 52, 70, 0.55);
+        --stack-card-alpha: 0.82;
+        --stack-card-blur: 16px;
+        --stack-card-saturate: 1.1;
+        --stack-card-border: rgba(255, 255, 255, 0.08);
+        --stack-card-rgb: 30, 32, 48;
+    }
+}
+
+/* Page background layer (put background image into static/ and set --stack-bg-image) */
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image: var(--stack-bg-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: var(--stack-bg-opacity);
+    transform: scale(var(--stack-bg-scale));
+    filter: blur(var(--stack-bg-blur));
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--stack-bg-overlay);
+}
+
+/* Smart glass cards: only blur when in viewport (JS toggles .is-blur-active) */
+.stack-card {
+    background-color: rgba(var(--stack-card-rgb, 255, 255, 255), var(--stack-card-alpha));
+    border: 1px solid var(--stack-card-border);
+    border-radius: var(--card-border-radius);
+}
+
+.stack-card.is-blur-active {
+    -webkit-backdrop-filter: blur(var(--stack-card-blur)) saturate(var(--stack-card-saturate));
+    backdrop-filter: blur(var(--stack-card-blur)) saturate(var(--stack-card-saturate));
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .stack-card {
+        border: none;
+        background-color: var(--card-background);
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .stack-card {
+        border: none;
+        background-color: var(--card-background);
     }
 }
