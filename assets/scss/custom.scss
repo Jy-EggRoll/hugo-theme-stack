@@ -131,6 +131,16 @@ $mocha-crust: #11111b;
     --blockquote-background-color: #{$latte-surface0}; // 引用块背景色
     --card-background-selected: #{$latte-overlay0}; // 卡片选中状态的颜色
 
+    // 页面背景设置总设置
+    --stack-bg-image: url("/background/雪_compressed.png"); // 背景路径，设为 none 表示不使用背景，其中 / 指 main/static，构建时，这个目录会复制到根
+    --stack-bg-opacity: 0.2;
+    --stack-bg-blur: 16px;
+    --stack-bg-scale: 1.2;
+    // 背景总设置结束
+
+    // 亮色模式遮罩
+    --stack-bg-overlay: rgba(239, 241, 245, 0.6);
+
     &[data-scheme="dark"] {
         --body-background: #{$frappe-base}; // 页面背景色
         --accent-color: #{$frappe-peach}; // 主要强调色
@@ -149,5 +159,38 @@ $mocha-crust: #11111b;
         --card-separator-color: #{$frappe-overlay2}; // 分割提示线
         --blockquote-background-color: #{$frappe-surface0}; // 引用块背景色
         --card-background-selected: #{$frappe-overlay0}; // 卡片选中状态的颜色
+
+        // 暗色模式遮罩
+        --stack-bg-overlay: rgba(48, 52, 70, 0.6);
     }
 }
+
+// 壁纸层导入
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image: var(--stack-bg-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: var(--stack-bg-opacity);
+    transform: scale(var(--stack-bg-scale));
+    filter: blur(var(--stack-bg-blur));
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--stack-bg-overlay);
+}
+// 壁纸层导入结束
